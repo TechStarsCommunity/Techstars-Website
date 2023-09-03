@@ -18,7 +18,7 @@ const Hero = () => {
             {/* <div className=' absolute left-0 h-full max-w-[300px] w-[30%] flex items-center justify-center z-'>
                 <img src={LeftHero} alt="" />
             </div> */}
-            <div className=' absolute left-0 h-full max-w-[300px] w-[30%] flex items-center justify-center z-'>
+            <div className=' absolute left-0 h-full max-w-[300px] w-[50%] md:flex hidden items-center justify-center z-'>
                 <img src={left1} alt="" className='w-[60px] h-[60px] right-[20px] top-[230px] absolute image' />
                 <img src={left2} alt="" className='w-[60px] h-[60px] right-[55px] top-[310px] absolute image' />
                 <img src={left3} alt="" className='w-[60px] h-[60px] right-[120px] top-[380px] absolute image' />
@@ -61,7 +61,7 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <div className=' absolute right-0 h-full max-w-[300px] w-[30%] flex items-center justify-center rotate-180'>
+            <div className=' absolute right-0 h-full max-w-[300px] w-[50%] md:flex hidden items-center justify-center rotate-180'>
                 <img src={left1} alt="" className='w-[60px] h-[60px] right-[20px] top-[230px] absolute image' />
                 <img src={left2} alt="" className='w-[60px] h-[60px] right-[55px] top-[310px] absolute image' />
                 <img src={left3} alt="" className='w-[60px] h-[60px] right-[120px] top-[380px] absolute image' />
