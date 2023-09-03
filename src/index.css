@@ -141,7 +141,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 40px;
+  padding: 20px;
 }
 
 .item1 {
