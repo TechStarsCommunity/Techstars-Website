@@ -5,6 +5,7 @@ import About from '../components/About';
 import Reward from '../components/Reward';
 import Project from '../components/Project';
 import YourComponent from '../components/YourComponent';
+import Footer from '../components/Footer';
 
 const LandingPage = () => {
     return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
             <YourComponent />
             <Reward />
             <Project />
+            <Footer />
         </div>
     )
 }
