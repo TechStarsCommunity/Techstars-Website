@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Logo from "../assets/image/Logo1.svg"
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from 'react-router-dom'
+
 
 const NavBar = () => {
     const [disableScroll, setDisableScroll] = useState(false);
@@ -33,19 +35,36 @@ const NavBar = () => {
                             </div>
                         </div>
                     )}
-                    <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full bg-[grey]" : ""}`}>
-                        Home
-                    </p>
-                    <p className={`text-[18px] font-[400] p-2 rounded-sm  ${navState ? "w-full bg-[grey]" : ""}`}>
-                        About Us
-                    </p>  <p className={`text-[18px] font-[400] p-2 rounded-sm  ${navState ? "w-full bg-[grey]" : ""}`}>
-                        Featured Projects
-                    </p>  <p className={`text-[18px] font-[400] p-2 rounded-sm  ${navState ? "w-full bg-[grey]" : ""}`}>
-                        Blog
-                    </p>
+                    <Link to="/" className={`${navState ? "w-full bg-[grey]" : ""}`}>
+                        <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                            Home
+                        </p>
+                    </Link>
+                    <Link to="/about" className={`${navState ? "w-full bg-[grey]" : ""}`}>
+                        <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                            About Us
+                        </p>
+                    </Link>
+                    <Link to="/featured" className={`${navState ? "w-full bg-[grey]" : ""}`}>
+                        <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                            Featured Projects
+                        </p>
+                    </Link>
+                    <Link to="/blog" className={`${navState ? "w-full bg-[grey]" : ""}`}>
+                        <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center" : ""}`}>
+                            Blog
+                        </p>
+                    </Link>
+                    {navState && (
+                        <Link to="/contact" className='w-full'>
+                            <button className='px-[30px] py-[10px] rounded-md border border-black w-full bg-[#750ff7] text-white '>
+                                Contact Us
+                            </button>
+                        </Link>
+                    )}
                 </div>
             </div>
-            <div className='hidden md:flex' onClick={toggle}>
+            <div className='hidden md:flex'>
                 <button className='px-[30px] py-[10px] rounded-md border border-black'>
                     Contact Us
                 </button>
