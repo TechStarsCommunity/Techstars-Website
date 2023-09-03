@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from "../assets/image/Logo1.svg"
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiOutlineShoppingCart } from 'react-icons/ai';
 
 const NavBar = () => {
+    const [disableScroll, setDisableScroll] = useState(false);
     const [navState, setNavState] = useState(false)
     const toggle = () => {
         setNavState(!navState);
+        setDisableScroll(!disableScroll)
     }
+    useEffect(() => {
+        if (disableScroll) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [disableScroll]);
     return (
         <div className='w-full flex p-[20px] justify-between items-center'>
             <div className='w-[160px] h-[60px]'>
