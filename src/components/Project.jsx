@@ -9,7 +9,7 @@ const Project = () => {
                     Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added
                 </p>
                 <div className='project'>
-                    <div className='h-[200px] w-full Projectinfo  bg-black'>
+                    <div className='h-[300px] w-full Projectinfo  bg-black'>
 
                     </div>
                     <div className='Projectinfo bg-black'></div>

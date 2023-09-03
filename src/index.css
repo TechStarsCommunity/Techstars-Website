@@ -53,11 +53,13 @@ body {
 
 .reward {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "data1 illustration1"
     "data1 data2"
     "illustration2 data2";
+  gap: 35px;
 }
 
 .data1 {
@@ -130,4 +132,42 @@ body {
 
 .Projectinfo:nth-child(4) {
   grid-area: other4;
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.item1 {
+  display: grid;
+  grid-template-rows: 1fr 200px;
+  gap: 20px;
+}
+
+.item2 {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  grid-auto-flow: row dense;
+  gap: 20px;
+}
+
+
+
+@media screen and (max-width: 770px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .item1,
+  .item4 {
+    grid-row: auto;
+    grid-column: auto;
+  }
 }
