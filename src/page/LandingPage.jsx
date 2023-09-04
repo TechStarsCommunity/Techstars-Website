@@ -10,13 +10,11 @@ import Footer from '../components/Footer';
 const LandingPage = () => {
     return (
         <div className='w-full '>
-            <NavBar />
             <Hero />
             <About />
             <YourComponent />
             <Reward />
             <Project />
-            <Footer />
         </div>
     )
 }
