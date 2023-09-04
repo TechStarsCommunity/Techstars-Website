@@ -16,14 +16,14 @@ const SignUp = () => {
                 </div>
                 <div className='grid gap-[40px] w-full'>
                     <div className=''>
-                        <h2 className='text-3xl font-bold mb-2'>Welcome Back!</h2>
-                        <p className='text-lg'>Continue right Where You stopped</p>
+                        <h2 className='text-3xl font-bold mb-2'>Create Your Account</h2>
+                        <p className='text-lg'>Fill In Your details let's get started</p>
                     </div>
                     <div className='w-full'>
                         <button className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold flex items-center gap-2 justify-center'>
                             <FcGoogle size={35} />
                             <p>
-                                Sign in with Google
+                                Sign Up with Google
                             </p>
                         </button>
                     </div>
@@ -51,7 +51,7 @@ const SignUp = () => {
                         <input type="password" placeholder='Password' className=' p-[10px] border-[#E8E8E8] border ' />
                     </div>
                     <button className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold bg-black text-white'>
-                        Sign in
+                        Sign Up
                     </button>
                 </form >
                 <div className='w-full text-center'>
