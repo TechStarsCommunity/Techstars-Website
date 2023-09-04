@@ -1,16 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Logo from "../assets/image/Logo1.svg"
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiOutlineShoppingCart } from 'react-icons/ai';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const NavBar = () => {
+    const navigate = useNavigate();
+    const { logout, setMyUserDb, user } = useContext(AuthContext);
     const [disableScroll, setDisableScroll] = useState(false);
     const [navState, setNavState] = useState(false)
     const toggle = () => {
         setNavState(!navState);
         setDisableScroll(!disableScroll)
     }
+
+    const signUserOut = async () => {
+        logout();
+        toggle();
+        navigate("/");
+    }
+
     useEffect(() => {
         if (disableScroll) {
             document.body.style.overflow = 'hidden';
@@ -18,6 +28,7 @@ const NavBar = () => {
             document.body.style.overflow = 'auto';
         }
     }, [disableScroll]);
+
     return (
         <div className='w-full flex p-[20px] justify-between items-center'>
             <div className='w-[160px] h-[60px]'>
@@ -62,6 +73,10 @@ const NavBar = () => {
                             </button>
                         </Link>
                     )}
+                    {navState == true && user ? (
+                        <button onClick={signUserOut} className='px-[30px] py-[10px] rounded-md border border-black w-full bg-[#750ff7] text-white '>
+                            Logout
+                        </button>) : ""}
                 </div>
             </div>
             <div className='hidden md:flex'>

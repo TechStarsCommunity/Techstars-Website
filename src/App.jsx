@@ -8,21 +8,24 @@ import AppLayout from './Layout.jsx/AppLayout'
 import Login from './page/Login'
 import SignUp from './page/SignUp'
 import Blogs from './page/Blogs'
+import { AuthProvider } from './provider/AuthProvider'
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route index element={<LandingPage />} />
-          <Route path="/blogs" element={<Blogs />} />
-        </Route>
-        <Route path="/" element={""}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Route>
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<LandingPage />} />
+            <Route path="/blogs" element={<Blogs />} />
+          </Route>
+          <Route path="/" element={""}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }

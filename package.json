@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
+    "firebase": "^10.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.46.0",
     "react-icons": "^4.10.1",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -26,5 +31,9 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/canhamzacode/Techstars.git",
+  "author": "canhamzacode <abdulmuizzayo6@gmail.com>",
+  "license": "MIT"
 }
