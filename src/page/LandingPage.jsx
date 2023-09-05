@@ -6,16 +6,24 @@ import Reward from '../components/Reward';
 import Project from '../components/Project';
 import YourComponent from '../components/YourComponent';
 import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+import ScrollReveal from '../provider/ScrollReveal';
 
 const LandingPage = () => {
     return (
-        <div className='w-full '>
+        <motion.div
+            className='w-full '
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.1 } }}
+
+        >
             <Hero />
             <About />
             <YourComponent />
             <Reward />
             <Project />
-        </div>
+        </motion.div>
     )
 }
 

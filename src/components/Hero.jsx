@@ -11,6 +11,8 @@ import left6 from "../assets/image/left6.svg"
 import left7 from "../assets/image/left7.svg"
 import left8 from "../assets/image/left8.svg"
 import left9 from "../assets/image/left9.svg"
+import { motion, useAnimation } from 'framer-motion';
+import ScrollReveal from '../provider/ScrollReveal'
 
 const Hero = () => {
     return (
@@ -31,34 +33,46 @@ const Hero = () => {
             </div>
             <div className='max-w-[600px] w-full mx-auto p-2 items-center justify-center z-[2] '>
                 <div className='flex flex-col w-full items-center justify-center gap-[15px]'>
-                    <div className='rounded-tl-xl rounded-br-xl rounded-tr-xl border border-black p-[10px] font-bold'>
-                        <h1 className='text-2xl md:text-3xl'>
-                            A Community for Techies
-                        </h1>
-                    </div>
-                    <div className='flex gap-1 items-center w-full justify-center'>
-                        <div className='w-[50px] h-[50px] rounded-full '>
-                            <img src={heroImg} alt="" className='w-full h-full' />
-                        </div>
-                        <div className='w-[50px] h-[50px] rounded-full '>
-                            <img src={heroImg} alt="" className='w-full h-full' />
-                        </div>
-                        <div className='rounded-tl-xl rounded-bl-xl rounded-tr-xl border border-[#333333] p-[10px] font-bold bg-[#333333] text-white'>
+                    <ScrollReveal direction="top">
+                        <div className='rounded-tl-xl rounded-br-xl rounded-tr-xl border border-black p-[10px] font-bold'>
                             <h1 className='text-2xl md:text-3xl'>
-                                Who Wants To Grow
+                                A Community for Techies
                             </h1>
                         </div>
+                    </ScrollReveal>
+                    <div className='flex gap-1 items-center w-full justify-center'>
+                        <ScrollReveal direction="left">
+                            <div className='w-[50px] h-[50px] rounded-full '>
+                                <img src={heroImg} alt="" className='w-full h-full' />
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal direction="left">
+                            <div className='w-[50px] h-[50px] rounded-full '>
+                                <img src={heroImg} alt="" className='w-full h-full' />
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal direction="right">
+                            <div className='rounded-tl-xl rounded-bl-xl rounded-tr-xl border border-[#333333] p-[10px] font-bold bg-[#333333] text-white'>
+                                <h1 className='text-2xl md:text-3xl'>
+                                    Who Wants To Grow
+                                </h1>
+                            </div>
+                        </ScrollReveal>
                     </div>
                     <div className='px-[20px]'>
-                        <p className='text-lg text-center'>
-                            Techstars community is a gathering of blah blah contents would be added by my boss
-                        </p>
+                        <ScrollReveal direction="left">
+                            <p className='text-lg text-center'>
+                                Techstars community is a gathering of blah blah contents would be added by my boss
+                            </p>
+                        </ScrollReveal>
                     </div>
-                    <button className='rounded-xl border border-black px-[45px] py-[10px] font-bold bg-[#333333] text-white'>
-                        <h1 className='text-base'>
-                            Join The Community
-                        </h1>
-                    </button>
+                    <ScrollReveal direction="bottom">
+                        <button className='rounded-xl border border-black px-[45px] py-[10px] font-bold bg-[#333333] text-white'>
+                            <h1 className='text-base'>
+                                Join The Community
+                            </h1>
+                        </button>
+                    </ScrollReveal>
                 </div>
             </div>
             <div className=' absolute right-0 h-full max-w-[300px] w-[50%] md:flex hidden items-center justify-center rotate-180'>

@@ -31,16 +31,20 @@ const NavBar = () => {
 
     return (
         <div className='w-full flex p-[20px] justify-between items-center'>
-            <div className='w-[160px] h-[60px]'>
-                <img src={Logo} alt="" className='w-full h-full' />
-            </div>
+            <Link to="/">
+                <div className='w-[160px] h-[60px]'>
+                    <img src={Logo} alt="" className='w-full h-full' />
+                </div>
+            </Link>
             <div className={`  ${navState ? "flex absolute w-full h-full top-0 left-0  z-10 bg-black/80" : ""}`}>
                 <div className={`${navState ? "flex flex-col gap-[25px] p-[20px] h-full z-10 " : "hidden"}  md:flex md:gap-[35px] items-center ${navState ? "w-[80%] bg-white absolute top-0 left-0" : "relative"}`} >
                     {navState && (
                         <div className="flex justify-between items-center w-full">
-                            <div className='w-[160px] h-[60px]'>
-                                <img src={Logo} alt="" className='w-full h-full' />
-                            </div>
+                            <Link to="/">
+                                <div className='w-[160px] h-[60px]'>
+                                    <img src={Logo} alt="" className='w-full h-full' />
+                                </div>
+                            </Link>
                             <div className='flex md:hidden cursor-pointer' onClick={toggle}>
                                 <AiOutlineClose size={30} />
                             </div>
@@ -61,7 +65,7 @@ const NavBar = () => {
                             Featured Projects
                         </p>
                     </Link>
-                    <Link to="/blog" className={`${navState ? "w-full bg-[grey]" : ""}`}>
+                    <Link to="/blogs" className={`${navState ? "w-full bg-[grey]" : ""}`}>
                         <p className={`text-[18px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center" : ""}`}>
                             Blog
                         </p>

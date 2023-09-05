@@ -12,6 +12,7 @@ import { collection, doc, getDoc, getDocs, query, setDoc, where } from 'firebase
 import { useAuthState } from 'react-firebase-hooks/auth'
 import useCheckUserExistence from '../hooks/useCheckUserExistence'
 import { AuthContext } from "../provider/AuthProvider"
+import { motion } from 'framer-motion'
 
 const SignUp = () => {
     const navigate = useNavigate()
@@ -115,7 +116,11 @@ const SignUp = () => {
         }
     };
     return (
-        <div className='w-full grid gap[20px] grid-cols-1 md:grid-cols-2 h-[100vh]'>
+        <motion.div className='w-full grid gap[20px] grid-cols-1 md:grid-cols-2 h-[100vh]'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.1 } }}
+        >
             <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[20px] px-[40px]'>
                 <div className='w-full flex items-center justify-center'>
                     <div className='w-[160px] h-[60px]'>
@@ -193,7 +198,7 @@ const SignUp = () => {
             <div className='hidden md:flex w-full h-[100vh] bg-white'>
                 <img src={login} alt="" className='h-full w-full object-contain' />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
