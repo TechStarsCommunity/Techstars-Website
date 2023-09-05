@@ -12,6 +12,7 @@ import { collection, doc, getDoc, setDoc } from 'firebase/firestore'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import useCheckUserExistence from '../hooks/useCheckUserExistence'
 import { AuthContext } from "../provider/AuthProvider"
+import useSignInWithGoogle from '../hooks/useSignInWithGoogle'
 
 const SignUp = () => {
     const navigate = useNavigate()
@@ -23,6 +24,23 @@ const SignUp = () => {
     const signUserOut = async () => {
         logout();
         // navigate("/");
+    }
+
+    const signInWithGoogle = () => {
+        const response = useSignInWithGoogle();
+        console.log(response);
+        if (response.userData) {
+            // User object exists, update your state with user data
+            setMyUserDb(response.userData);
+            console.log('Successfully signed in with Google:', response.userData);
+            navigate("/");
+        } else if (response.error) {
+            // An error occurred during sign-in
+            console.error('Error signing in with Google:', response.error);
+        } else {
+            // Handle the case where you don't receive user data or an error
+            console.error('Unexpected response from useSignInWithGoogle:', response);
+        }
     }
 
     const onSignUp = async (data) => {
@@ -78,14 +96,13 @@ const SignUp = () => {
                         <img src={logo} alt="" className='w-full h-full' />
                     </div>
                 </div>
-                <button onClick={signUserOut}>logout</button>
                 <div className='grid gap-[40px] w-full'>
                     <div className=''>
                         <h2 className='text-3xl font-bold mb-2'>Create Your Account</h2>
                         <p className='text-lg'>Fill In Your details let's get started</p>
                     </div>
                     <div className='w-full'>
-                        <button className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold flex items-center gap-2 justify-center'>
+                        <button onClick={signInWithGoogle} className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold flex items-center gap-2 justify-center'>
                             <FcGoogle size={35} />
                             <p>
                                 Sign Up with Google

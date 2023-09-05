@@ -6,14 +6,18 @@ import { FcGoogle } from "react-icons/fc"
 import { Link, useNavigate } from 'react-router-dom'
 import useSubmit from '../hooks/useSubmit'
 import { loginSchema } from '../config/schema'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { AuthContext } from '../provider/AuthProvider'
-import { auth } from '../config/firebase'
+import { auth, db, googleProvider } from '../config/firebase'
+import useCheckUserExistence from '../hooks/useCheckUserExistence'
+import useGetUserById from '../hooks/useGetUserById'
+import { collection, doc, setDoc } from 'firebase/firestore'
 
 const Login = () => {
+    const usersRef = collection(db, 'userRef');
     const navigate = useNavigate();
     const { register, handleSubmit: newSubmit, errors } = useSubmit(loginSchema);
-    const { setMyUserDb } = useContext(AuthContext);
+    const { setMyUserDb, user } = useContext(AuthContext);
     const [loading, setLoading] = useState(false)
     const [loginError, setLoginError] = useState('');
 
@@ -51,6 +55,48 @@ const Login = () => {
             }
         }
     };
+
+    const signInWithGoogle = async () => {
+        if (user) navigate("/")
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            const user = result.user;
+
+            if (user && user.uid) {
+                const authenticatedUserId = user.uid;
+
+                const isUserExisting = await useCheckUserExistence(authenticatedUserId);
+
+                if (isUserExisting) {
+                    const data = useGetUserById(authenticatedUserId);
+                    console.log(data);
+                    navigate("/");
+                } else {
+                    // User schema doesn't exist, create the user schema and redirect
+                    const userData = {
+                        userId: authenticatedUserId,
+                        email: user.email,
+                        username: user.displayName,
+                        role: "user"
+                    };
+
+                    // Create the user schema in Firestore
+                    await setDoc(doc(usersRef, authenticatedUserId), userData);
+
+                    // Update the user context or perform any other necessary actions
+                    setMyUserDb(userData);
+
+                    // Navigate to the desired page
+                    navigate("/");
+                }
+            } else {
+                console.error("Error signing in with Google: User information not available.");
+            }
+        } catch (error) {
+            console.error("Error signing in with Google:", error);
+        }
+    }
+
     return (
         <div className='w-full grid gap[20px] grid-cols-1 md:grid-cols-2 h-[100vh]'>
             <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[20px] px-[40px]'>
@@ -65,7 +111,7 @@ const Login = () => {
                         <p className='text-lg'>Continue right Where You stopped</p>
                     </div>
                     <div className='w-full'>
-                        <button className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold flex items-center gap-2 justify-center'>
+                        <button onClick={signInWithGoogle} className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold flex items-center gap-2 justify-center'>
                             <FcGoogle size={35} />
                             <p>
                                 Sign in with Google
@@ -105,6 +151,8 @@ const Login = () => {
                             </p>
                         )}
                     </div>
+                    {loginError && <p style={{ textTransform: "capitalize" }}
+                        className="text-red-600" >{loginError}</p>}
                     <button disabled={loading} type='submit' className='px-[30px] py-[10px] rounded-md border border-black w-full font-bold bg-black text-white'>
                         {loading ? "Loading..." : "Sign in"}
                     </button>
