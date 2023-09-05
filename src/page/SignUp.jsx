@@ -6,13 +6,12 @@ import { FcGoogle } from "react-icons/fc"
 import { Link, useNavigate } from 'react-router-dom'
 import { signUpSchema } from '../config/schema'
 import useSubmit from '../hooks/useSubmit'
-import { auth, db } from '../config/firebase'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { collection, doc, getDoc, setDoc } from 'firebase/firestore'
+import { auth, db, googleProvider } from '../config/firebase'
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
+import { collection, doc, getDoc, getDocs, query, setDoc, where } from 'firebase/firestore'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import useCheckUserExistence from '../hooks/useCheckUserExistence'
 import { AuthContext } from "../provider/AuthProvider"
-import useSignInWithGoogle from '../hooks/useSignInWithGoogle'
 
 const SignUp = () => {
     const navigate = useNavigate()
@@ -26,20 +25,47 @@ const SignUp = () => {
         // navigate("/");
     }
 
-    const signInWithGoogle = () => {
-        const response = useSignInWithGoogle();
-        console.log(response);
-        if (response.userData) {
-            // User object exists, update your state with user data
-            setMyUserDb(response.userData);
-            console.log('Successfully signed in with Google:', response.userData);
+
+    const signInWithGoogle = async () => {
+        if (user) {
+            return;
             navigate("/");
-        } else if (response.error) {
-            // An error occurred during sign-in
-            console.error('Error signing in with Google:', response.error);
-        } else {
-            // Handle the case where you don't receive user data or an error
-            console.error('Unexpected response from useSignInWithGoogle:', response);
+
+        }
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            const user = result.user;
+
+            if (user && user.uid) {
+                const authenticatedUserId = user.uid;
+
+                const isUserExisting = await useCheckUserExistence(authenticatedUserId);
+
+                if (isUserExisting) {
+                    navigate("/");
+                } else {
+                    // User schema doesn't exist, create the user schema and redirect
+                    const userData = {
+                        userId: authenticatedUserId,
+                        email: user.email,
+                        username: user.displayName,
+                        role: "user"
+                    };
+
+                    // Create the user schema in Firestore
+                    await setDoc(doc(usersRef, authenticatedUserId), userData);
+
+                    // Update the user context or perform any other necessary actions
+                    setMyUserDb(userData);
+
+                    // Navigate to the desired page
+                    navigate("/");
+                }
+            } else {
+                console.error("Error signing in with Google: User information not available.");
+            }
+        } catch (error) {
+            console.error("Error signing in with Google:", error);
         }
     }
 

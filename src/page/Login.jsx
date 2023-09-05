@@ -11,7 +11,7 @@ import { AuthContext } from '../provider/AuthProvider'
 import { auth, db, googleProvider } from '../config/firebase'
 import useCheckUserExistence from '../hooks/useCheckUserExistence'
 import useGetUserById from '../hooks/useGetUserById'
-import { collection, doc, setDoc } from 'firebase/firestore'
+import { collection, doc, getDocs, query, setDoc, where } from 'firebase/firestore'
 
 const Login = () => {
     const usersRef = collection(db, 'userRef');
@@ -57,7 +57,11 @@ const Login = () => {
     };
 
     const signInWithGoogle = async () => {
-        if (user) navigate("/")
+        if (user) {
+            return;
+            navigate("/");
+
+        }
         try {
             const result = await signInWithPopup(auth, googleProvider);
             const user = result.user;
@@ -68,8 +72,6 @@ const Login = () => {
                 const isUserExisting = await useCheckUserExistence(authenticatedUserId);
 
                 if (isUserExisting) {
-                    const data = useGetUserById(authenticatedUserId);
-                    console.log(data);
                     navigate("/");
                 } else {
                     // User schema doesn't exist, create the user schema and redirect
@@ -102,7 +104,9 @@ const Login = () => {
             <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[20px] px-[40px]'>
                 <div className='w-full flex items-center justify-center'>
                     <div className='w-[160px] h-[60px]'>
-                        <img src={logo} alt="" className='w-full h-full' />
+                        <Link to="/">
+                            <img src={logo} alt="" className='w-full h-full' />
+                        </Link>
                     </div>
                 </div>
                 <div className='grid gap-[40px] w-full'>
