@@ -1,5 +1,6 @@
 import React from 'react';
 import rewardY from "../assets/image/rewardY.svg"
+import rewardG from "../assets/image/rewardG.svg"
 import ScrollReveal from '../provider/ScrollReveal';
 // import './YourComponent.css'; // Import your CSS file
 
@@ -27,7 +28,7 @@ const YourComponent = () => {
             <ScrollReveal direction="right">
                 <div className="item item2">
                     <div className=' items-center w-full'>
-                        <img src={rewardY} alt="" className='object-cover h-full w-full' />
+                        <img src={rewardG} alt="" className='object-cover h-full w-full' />
                     </div>
                     <div className='p-[20px] w-full border rounded-md grid gap-2 border-black me'>
                         <div className='w-full'>

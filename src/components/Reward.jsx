@@ -1,5 +1,6 @@
 import React from 'react'
-import rewardY from "../assets/image/rewardY.svg"
+import rewardB from "../assets/image/rewardB.svg"
+import rewardP from "../assets/image/rewardP.svg"
 import ScrollReveal from '../provider/ScrollReveal'
 
 const Reward = () => {
@@ -19,14 +20,14 @@ const Reward = () => {
                         </div>
                     </div>
                     <div className=' items-center w-full h-full'>
-                        <img src={rewardY} alt="" className='object-cover w-full h-full' />
+                        <img src={rewardB} alt="" className='object-cover w-full h-full' />
                     </div>
                 </div>
             </ScrollReveal>
             <ScrollReveal direction="right">
                 <div className="item item2">
                     <div className=' items-center w-full'>
-                        <img src={rewardY} alt="" className='object-cover h-full w-full' />
+                        <img src={rewardP} alt="" className='object-cover h-full w-full' />
                     </div>
                     <div className='p-[20px] w-full border rounded-md grid gap-2 border-black me'>
                         <div className='w-full'>

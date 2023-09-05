@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='w-full  bg-[#222222] overflow-x-hidden '>
             <ScrollReveal direction="top">
                 <div className="p-[20px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center   ">
-                    <ScrollReveal direction="left">
+                    <ScrollReveal direction="left" className="max-w-[250px] w-full md:w-[250px] h-[250px]">
                         <div className='w-full md:w-[250px] h-[250px] bg-[#fff]'></div>
                     </ScrollReveal>
                     <ScrollReveal direction="right">
