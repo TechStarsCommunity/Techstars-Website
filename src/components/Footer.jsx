@@ -3,8 +3,8 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Footer = () => {
     return (
-        <ScrollReveal direction="top">
-            <div className='w-full  bg-[#222222] '>
+        <div className='w-full  bg-[#222222] overflow-x-hidden '>
+            <ScrollReveal direction="top">
                 <div className="p-[20px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center   ">
                     <ScrollReveal direction="left">
                         <div className='w-full md:w-[250px] h-[250px] bg-[#fff]'></div>
@@ -24,8 +24,8 @@ const Footer = () => {
                 <div className="p-[20px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center text-white  ">
                     Built By Team SoluTech
                 </div>
-            </div>
-        </ScrollReveal>
+            </ScrollReveal>
+        </div>
     )
 }
 
