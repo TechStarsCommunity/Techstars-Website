@@ -8,6 +8,8 @@ import YourComponent from '../components/YourComponent';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../provider/ScrollReveal';
+import WhatWeDo from '../components/WhatWeDo';
+import BeInformed from '../components/BeInformed';
 
 const LandingPage = () => {
     return (
@@ -20,9 +22,9 @@ const LandingPage = () => {
         >
             <Hero />
             <About />
-            <YourComponent />
-            <Reward />
+            <WhatWeDo />
             <Project />
+            <BeInformed />
         </motion.div>
     )
 }

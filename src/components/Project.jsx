@@ -1,5 +1,9 @@
 import React from 'react'
 import ScrollReveal from '../provider/ScrollReveal'
+import nextGen from "../assets/image/nextGen.svg"
+import chatApp from "../assets/image/chatApp.svg"
+import universe from "../assets/image/universe.svg"
+import dashboard from "../assets/image/dashboard.svg"
 
 const Project = () => {
     return (
@@ -7,19 +11,42 @@ const Project = () => {
             <div className='borderp-[20px] rounded-l grid gap-[20px]'>
                 <ScrollReveal direction="left">
                     <h3 className='text-3xl font-bold'>See What Techstars are Building</h3>
-                    <p>
+                    <p className='text-lg'>
                         Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added
                     </p>
                 </ScrollReveal>
-                <ScrollReveal direction="right">
+                <ScrollReveal direction="top">
                     <div className='project'>
-                        <div className='h-[300px] w-full Projectinfo  bg-black'>
-
+                        <div className='h-[300px] w-full gallery1 relative'>
+                            <div className="absolute bottom-0 left-0 p-[20px]   ">
+                                <h3 className='text-2xl font-bold text-white'>Odyssey - Next Gen OS Landing Page</h3>
+                                <p className='text-base text-white'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            </div>
+                            <img src={nextGen} alt="" className='w-full h-full object-cover rounded' />
                         </div>
-                        <div className='Projectinfo bg-black'></div>
-                        <div className='Projectinfo bg-black'></div>
-                        <div className='Projectinfo bg-black'></div>
-                        <div className='Projectinfo bg-black'></div>
+                        <div className='h-[300px] w-full gallery2 relative'>
+                            <div className="absolute bottom-0 left-0 p-[20px]  ">
+                                <h3 className='text-2xl font-bold text-white'>Odyssey - Next Gen OS Landing Page</h3>
+                                <p className='text-base text-white'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            </div>
+                            <img src={dashboard} alt="" className='w-full h-full object-cover rounded' />
+                        </div>
+                    </div>
+                    <div className='project1'>
+                        <div className='h-[300px] w-full gallery3 relative'>
+                            <div className="absolute bottom-0 left-0 p-[20px]  ">
+                                <h3 className='text-2xl font-bold text-white'>Odyssey - Next Gen OS Landing Page</h3>
+                                <p className='text-base text-white'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            </div>
+                            <img src={chatApp} alt="" className='w-full h-full object-cover rounded' />
+                        </div>
+                        <div className='h-[300px] w-full gallery4 relative'>
+                            <div className="absolute bottom-0 left-0 p-[20px]   ">
+                                <h3 className='text-2xl font-bold text-white'>Odyssey - Next Gen OS Landing Page</h3>
+                                <p className='text-base text-white'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            </div>
+                            <img src={universe} alt="" className='w-full h-full object-cover rounded' />
+                        </div>
                     </div>
                 </ScrollReveal>
             </div>

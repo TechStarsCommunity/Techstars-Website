@@ -82,11 +82,15 @@ body {
 
 .project {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "base base other1"
-    "other2 other3 other4"
-  ;
+  grid-template-columns: 1fr 0.5fr;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.project1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
   gap: 10px;
 }
 
@@ -105,35 +109,15 @@ body {
     display: none;
   }
 
-  .project {
+  .project,
+  .project1 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "base "
-      "other1"
-      "other2"
-      "other3"
-      "other4"
-    ;
     gap: 10px;
   }
 }
 
-.Projectinfo:nth-child(1) {
-  grid-area: base;
-}
 
-.Projectinfo:nth-child(2) {
-  grid-area: other1;
-}
-
-.Projectinfo:nth-child(3) {
-  grid-area: other2;
-}
-
-.Projectinfo:nth-child(4) {
-  grid-area: other4;
-}
 
 
 

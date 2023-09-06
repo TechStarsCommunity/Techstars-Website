@@ -1,6 +1,8 @@
 import React from 'react'
 import rewardB from "../assets/image/rewardB.svg"
 import rewardP from "../assets/image/rewardP.svg"
+import innovation from "../assets/image/innovation.svg"
+import startup from "../assets/image/startup.svg"
 import ScrollReveal from '../provider/ScrollReveal'
 
 const Reward = () => {
@@ -10,13 +12,15 @@ const Reward = () => {
                 <div className="item item1">
                     <div className=' p-[20px] w-full border rounded-md grid gap-2 border-black'>
                         <div className='w-full'>
-                            <h3 className='text-3xl font-bold'>Get Rewarded For Building Stuff</h3>
+                            <h3 className='text-3xl font-bold'>Unlocking Innovation Together</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            {/* <img src={LeftHero} alt="" className='w-full h-full object-contain' /> */}
+                            <img src={innovation} alt="" className='w-full h-full object-contain' />
                         </div>
                         <div className='w-full'>
-                            <p className='text-lg'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            <p className='text-lg'>
+                                Techstars is where innovation flourishes. Join a diverse global community of tech visionaries, mentors, and investors collaborating to drive the next wave of groundbreaking ideas.
+                            </p>
                         </div>
                     </div>
                     <div className=' items-center w-full h-full'>
@@ -31,13 +35,15 @@ const Reward = () => {
                     </div>
                     <div className='p-[20px] w-full border rounded-md grid gap-2 border-black me'>
                         <div className='w-full'>
-                            <h3 className='text-3xl font-bold'>Get Rewarded For Building Stuff</h3>
+                            <h3 className='text-3xl font-bold'>Accelerate Your Startup</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            {/* <img src={LeftHero} alt="" className='w-full h-full object-contain' /> */}
+                            <img src={startup} alt="" className='w-full h-full object-contain' />
                         </div>
                         <div className='w-full'>
-                            <p className='text-lg'>Techstars for Tech, makes sure every developer gets high recognition and rewarded for building project with us. and many more content to be added</p>
+                            <p className='text-lg'>
+                                Techstars is your launchpad for startups. Access mentorship, funding opportunities, and resources that can supercharge your company's growth. Whether you're at the idea stage or scaling up.
+                            </p>
                         </div>
                     </div>
                 </div>

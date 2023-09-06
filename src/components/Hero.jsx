@@ -62,7 +62,7 @@ const Hero = () => {
                     <div className='px-[20px]'>
                         <ScrollReveal direction="left">
                             <p className='text-lg text-center'>
-                                Techstars community is a gathering of blah blah contents would be added by my boss
+                                A home for tech entry/expert professionals who wants to network, build, connect, evolve and grow.
                             </p>
                         </ScrollReveal>
                     </div>
