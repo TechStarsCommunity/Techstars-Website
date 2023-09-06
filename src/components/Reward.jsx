@@ -7,15 +7,15 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Reward = () => {
     return (
-        <div className="grid-container bg-blue-50 p-[64px] w-full overflow-x-hidden">
+        <div className="grid-container p-[64px] w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
-                    <div className=' p-[64px] w-full border rounded-md grid gap-2 border-black'>
+                    <div className=' p-[20px] w-full border rounded-md grid gap-[20px] border-black'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Unlocking Innovation Together</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            <img src={innovation} alt="" className='w-full h-full object-contain' />
+                            <img src={innovation} alt="" className='w-full h-full object-cover' />
                         </div>
                         <div className='w-full'>
                             <p className='text-lg'>
@@ -33,12 +33,12 @@ const Reward = () => {
                     <div className=' items-center w-full'>
                         <img src={rewardP} alt="" className='object-cover h-full w-full' />
                     </div>
-                    <div className='p-[64px] w-full border rounded-md grid gap-2 border-black me'>
+                    <div className='p-[20px] w-full border rounded-md grid gap-[20px] border-black me'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Accelerate Your Startup</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            <img src={startup} alt="" className='w-full h-full object-contain' />
+                            <img src={startup} alt="" className='w-full h-full object-cover' />
                         </div>
                         <div className='w-full'>
                             <p className='text-lg'>

@@ -11,12 +11,12 @@ const YourComponent = () => {
         <div className="grid-container bg-blue-50 p-[64px] w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
-                    <div className=' p-[64px] w-full border rounded-md grid gap-2 border-black'>
+                    <div className=' p-[20px] w-full border rounded-b-[30px] rounded-tr-[30px] grid gap-[20px] border-black'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Get involved in Open-source</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            <img src={openSource} alt="" className='w-full h-full object-contain' />
+                            <img src={openSource} alt="" className='w-full h-full object-cover' />
                         </div>
                         <div className='w-full'>
                             <p className='text-lg'>
@@ -34,12 +34,12 @@ const YourComponent = () => {
                     <div className=' items-center w-full'>
                         <img src={rewardG} alt="" className='object-cover h-full w-full' />
                     </div>
-                    <div className='p-[64px] w-full border rounded-md grid gap-2 border-black me'>
+                    <div className='p-[20px] rounded-bl-[30px] rounded-t-[30px] w-full border grid gap-[20px] border-black me'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Stay Ahead of the Tech Curve</h3>
                         </div>
                         <div className='w-full h-[250px] bg-[#F1F1F1]'>
-                            <img src={stayAhead} alt="" className='w-full h-full object-contain' />
+                            <img src={stayAhead} alt="" className='w-full h-full object-cover' />
                         </div>
                         <div className='w-full'>
                             <p className='text-lg'>

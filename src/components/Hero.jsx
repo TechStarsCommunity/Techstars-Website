@@ -16,7 +16,7 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Hero = () => {
     return (
-        <div className='w-full h-[500px] relative bg-blue-50 flex items-center justify-center leftAnimation overflow-hidden'>
+        <div className='w-full min-h-[500px] py-[30px] relative flex items-center justify-center leftAnimation overflow-hidden px-[64px]'>
             {/* <div className=' absolute left-0 h-full max-w-[300px] w-[30%] flex items-center justify-center z-'>
                 <img src={LeftHero} alt="" />
             </div> */}
@@ -31,44 +31,48 @@ const Hero = () => {
                 <img src={left8} alt="" className='w-[60px] h-[60px] left-0 top-[130px] absolute image' />
                 <img src={left9} alt="" className='w-[60px] h-[60px] right-[110px] top-[120px] absolute image' />
             </div>
-            <div className='max-w-[600px] w-full mx-auto p-2 items-center justify-center z-[2] '>
-                <div className='flex flex-col w-full items-center justify-center gap-[15px]'>
-                    <ScrollReveal direction="top">
-                        <div className='rounded-tl-xl rounded-br-xl rounded-tr-xl border border-black p-[10px] font-bold'>
-                            <h1 className='text-2xl md:text-3xl'>
-                                A Community for Techies
-                            </h1>
-                        </div>
-                    </ScrollReveal>
-                    <div className='flex gap-1 items-center w-full justify-center'>
-                        <ScrollReveal direction="left">
-                            <div className='w-[50px] h-[50px] rounded-full '>
-                                <img src={heroImg} alt="" className='w-full h-full' />
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal direction="left">
-                            <div className='w-[50px] h-[50px] rounded-full '>
-                                <img src={heroImg} alt="" className='w-full h-full' />
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal direction="right">
-                            <div className='rounded-tl-xl rounded-bl-xl rounded-tr-xl border border-[#333333] p-[10px] font-bold bg-[#333333] text-white'>
-                                <h1 className='text-2xl md:text-3xl'>
-                                    Who Wants To Grow
+            <div className='md:w-[550px] w-full mx-auto p-2 items-center justify-center z-[2] '>
+                <div className='flex flex-col w-full items-center justify-center gap-[32px] '>
+                    <div className='w-full gap-[15px] flex flex-col'>
+                        <div className='rounded-tl-xl rounded-br-xl rounded-tr-xl border border-black p-[15px] font-bold w-full '>
+                            <ScrollReveal direction="top" >
+                                <h1 className='text-2xl md:text-3xl text-center'>
+                                    A Community for Techies
                                 </h1>
+                            </ScrollReveal>
+                        </div>
+                        <div className='flex gap-1 items-center w-full md:justify-between flex-wrap justify-center '>
+                            <div className='flex gap-2'>
+                                <ScrollReveal direction="left">
+                                    <div className='w-[78px] h-[78px] rounded-full '>
+                                        <img src={heroImg} alt="" className='w-full h-full' />
+                                    </div>
+                                </ScrollReveal>
+                                <ScrollReveal direction="left">
+                                    <div className='w-[78px] h-[78px] rounded-full '>
+                                        <img src={heroImg} alt="" className='w-full h-full' />
+                                    </div>
+                                </ScrollReveal>
                             </div>
-                        </ScrollReveal>
-                    </div>
-                    <div className='px-[20px]'>
-                        <ScrollReveal direction="left">
-                            <p className='text-lg text-center'>
-                                A home for tech entry/expert professionals who wants to network, build, connect, evolve and grow.
-                            </p>
-                        </ScrollReveal>
+                            <ScrollReveal direction="right">
+                                <div className='rounded-tl-xl rounded-bl-xl rounded-tr-xl border border-[#333333] p-[10px] font-bold bg-[#333333] text-white w-full'>
+                                    <h1 className='text-2xl md:text-3xl px-[20px] py-[11px]'>
+                                        Who Wants To Grow
+                                    </h1>
+                                </div>
+                            </ScrollReveal>
+                        </div>
+                        <div className='px-[20px]'>
+                            <ScrollReveal direction="left">
+                                <p className='text-lg text-center'>
+                                    A home for tech entry/expert professionals who wants to network, build, connect, evolve and grow.
+                                </p>
+                            </ScrollReveal>
+                        </div>
                     </div>
                     <ScrollReveal direction="bottom">
-                        <button className='rounded-[8px] border border-black px-[45px] py-[10px] font-bold bg-[#333333] text-white'>
-                            <h1 className='text-base'>
+                        <button className='rounded-[8px] border border-black px-[25px] py-[18px] font-bold bg-[#333333] text-white w-[303px]'>
+                            <h1 className='text-base font-medium'>
                                 Join The Community
                             </h1>
                         </button>

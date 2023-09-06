@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Logo from "../assets/image/Logo1.svg"
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineUser } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../provider/AuthProvider';
 
@@ -37,7 +37,7 @@ const NavBar = () => {
                 </div>
             </Link>
             <div className={`  ${navState ? "flex absolute w-full h-full top-0 left-0  z-10 bg-black/80" : ""}`}>
-                <div className={`${navState ? "flex flex-col gap-[25px] p-[64px] h-full z-10 " : "hidden"}  md:flex md:gap-[35px] items-center ${navState ? "w-[80%] bg-white absolute top-0 left-0" : "relative"}`} >
+                <div className={`${navState ? "flex flex-col gap-[25px] p-[64px] h-full z-10 " : "hidden"}  md:flex md:gap-[40px] items-center ${navState ? "w-[80%] bg-white absolute top-0 left-0" : "relative"}`} >
                     {navState && (
                         <div className="flex justify-between items-center w-full">
                             <Link to="/">
@@ -50,33 +50,33 @@ const NavBar = () => {
                             </div>
                         </div>
                     )}
-                    <Link to="/" className={`${navState ? "w-full bg-[grey]" : ""}`}>
-                        <p className={`text-[16px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                    <Link to="/" className={`${navState ? "w-full" : ""}`}>
+                        <p className={`text-[16px] font-[400]  rounded-sm  ${navState ? "w-full text-center " : ""}`}>
                             Home
                         </p>
                     </Link>
-                    <Link to="/about" className={`${navState ? "w-full bg-[grey]" : ""}`}>
-                        <p className={`text-[16px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                    <Link to="/about" className={`${navState ? "w-full" : ""}`}>
+                        <p className={`text-[16px] font-[400] rounded-sm  ${navState ? "w-full text-center " : ""}`}>
                             About Us
                         </p>
                     </Link>
-                    <Link to="/featured" className={`${navState ? "w-full bg-[grey]" : ""}`}>
-                        <p className={`text-[16px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center " : ""}`}>
+                    <Link to="/featured" className={`${navState ? "w-full" : ""}`}>
+                        <p className={`text-[16px] font-[400] rounded-sm  ${navState ? "w-full text-center " : ""}`}>
                             Featured Projects
                         </p>
                     </Link>
-                    <Link to="/blogs" className={`${navState ? "w-full bg-[grey]" : ""}`}>
-                        <p className={`text-[16px] font-[400]  p-2 rounded-sm  ${navState ? "w-full text-center" : ""}`}>
+                    <Link to="/blogs" className={`${navState ? "w-full" : ""}`}>
+                        <p className={`text-[16px] font-[400] rounded-sm  ${navState ? "w-full text-center" : ""}`}>
                             Blog
                         </p>
                     </Link>
-                    {navState && (
-                        <Link to="/contact" className='w-full'>
+                    {navState == true && !user ? (
+                        <Link to="/login" className='w-full'>
                             <button className='px-[30px] py-[10px] rounded-md border border-black w-full bg-[#750ff7] text-white '>
-                                Contact Us
+                                Login
                             </button>
                         </Link>
-                    )}
+                    ) : ""}
                     {navState == true && user ? (
                         <button onClick={signUserOut} className='px-[30px] py-[10px] rounded-md border border-black w-full bg-[#750ff7] text-white '>
                             Logout
@@ -84,9 +84,16 @@ const NavBar = () => {
                 </div>
             </div>
             <div className='hidden md:flex'>
-                <button className='px-[30px] py-[10px] rounded-md border border-black'>
-                    Contact Us
-                </button>
+                {!user && <Link to="/login">
+                    <button className='px-[24px] py-[18px] rounded-md border border-black w-[191px]'>
+                        Log in
+                    </button>
+                </Link>}
+                {user && (
+                    <button className=' h-[50px] w-[50px] flex items-center justify-center rounded-full border border-black'>
+                        <AiOutlineUser size={30} />
+                    </button>
+                )}
             </div>
             <div className='flex md:hidden cursor-pointer' onClick={toggle}>
                 <AiOutlineMenu size={30} />
