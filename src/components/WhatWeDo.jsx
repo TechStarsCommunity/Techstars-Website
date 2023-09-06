@@ -5,7 +5,7 @@ import Reward from './Reward'
 
 const WhatWeDo = () => {
     return (
-        <div className='w-full grid gap-[20px] bg-blue-50 p-[20px] items-center justify-center '>
+        <div className='w-full grid gap-[64px] bg-blue-50 p-[64px] items-center justify-center '>
             <div className='flex items-center justify-center pt-[25px] gap-[10px] flex-wrap'>
                 <h3 className='text-3xl font-bold text-center'>What to expect from us</h3>
                 <div className='w-[100px] h-[50px]'>

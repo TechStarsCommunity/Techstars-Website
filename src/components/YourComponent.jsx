@@ -8,10 +8,10 @@ import ScrollReveal from '../provider/ScrollReveal';
 
 const YourComponent = () => {
     return (
-        <div className="grid-container bg-blue-50 p-[20px] w-full overflow-x-hidden">
+        <div className="grid-container bg-blue-50 p-[64px] w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
-                    <div className=' p-[20px] w-full border rounded-md grid gap-2 border-black'>
+                    <div className=' p-[64px] w-full border rounded-md grid gap-2 border-black'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Get involved in Open-source</h3>
                         </div>
@@ -34,7 +34,7 @@ const YourComponent = () => {
                     <div className=' items-center w-full'>
                         <img src={rewardG} alt="" className='object-cover h-full w-full' />
                     </div>
-                    <div className='p-[20px] w-full border rounded-md grid gap-2 border-black me'>
+                    <div className='p-[64px] w-full border rounded-md grid gap-2 border-black me'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Stay Ahead of the Tech Curve</h3>
                         </div>

@@ -67,7 +67,7 @@ const Hero = () => {
                         </ScrollReveal>
                     </div>
                     <ScrollReveal direction="bottom">
-                        <button className='rounded-xl border border-black px-[45px] py-[10px] font-bold bg-[#333333] text-white'>
+                        <button className='rounded-[8px] border border-black px-[45px] py-[10px] font-bold bg-[#333333] text-white'>
                             <h1 className='text-base'>
                                 Join The Community
                             </h1>

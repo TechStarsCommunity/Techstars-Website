@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className='w-full  bg-[#222222] overflow-x-hidden '>
             <ScrollReveal direction="top">
-                <div className="p-[20px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center   ">
+                <div className="p-[64px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center   ">
                     <ScrollReveal direction="left" className="max-w-[250px] w-full md:w-[250px] h-[250px]">
                         <div className='w-full md:w-[250px] h-[250px] bg-[#fff]'></div>
                     </ScrollReveal>
@@ -21,7 +21,7 @@ const Footer = () => {
                     </ScrollReveal>
                 </div>
                 <hr className='bg-white h-[2px] w-full ' />
-                <div className="p-[20px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center text-white  ">
+                <div className="p-[64px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center text-white  ">
                     Built By Team SoluTech
                 </div>
             </ScrollReveal>

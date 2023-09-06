@@ -121,7 +121,7 @@ const SignUp = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
         >
-            <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[20px] px-[40px]'>
+            <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[64px] px-[40px]'>
                 <div className='w-full flex items-center justify-center'>
                     <div className='w-[160px] h-[60px]'>
                         <img src={logo} alt="" className='w-full h-full' />
@@ -191,7 +191,7 @@ const SignUp = () => {
                         Sign Up
                     </button>
                 </form >
-                <div className='w-full text-center  p-[20px]'>
+                <div className='w-full text-center  p-[64px]'>
                     <p>Already have an account? <Link to="/login"><span className='text-[#750FF7]'>Sign In</span></Link></p>
                 </div>
             </div>

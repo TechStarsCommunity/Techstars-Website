@@ -3,7 +3,7 @@ import React from 'react'
 const BlogCard = () => {
     return (
         <div className='w-full p-[30px] grid gap-[10px]'>
-            <div className='w-full p-[10px] border border-b-black gap-[20px] grid md:grid-cols-2 grid-cols-1  '>
+            <div className='w-full p-[10px] border border-b-black gap-[64px] grid md:grid-cols-2 grid-cols-1  '>
                 <div className='gap-[10px] grid md:grid-cols-2 grid-cols-1   ' >
                     <div>
                         <p>3rd September, 2023</p>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const BeInformed = () => {
     return (
-        <div className='w-full p-[20px]'>
+        <div className='w-full p-[64px]'>
             <h1></h1>
             BeInformed
         </div>
