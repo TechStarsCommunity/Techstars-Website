@@ -7,10 +7,10 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Reward = () => {
     return (
-        <div className="grid-container p-[64px] w-full overflow-x-hidden">
+        <div className="grid-container w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
-                    <div className=' p-[20px] w-full border rounded-md grid gap-[20px] border-black'>
+                    <div className=' p-[20px] w-full border rounded-b-[30px] rounded-tr-[30px] grid gap-[20px] border-black'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Unlocking Innovation Together</h3>
                         </div>
@@ -33,7 +33,7 @@ const Reward = () => {
                     <div className=' items-center w-full'>
                         <img src={rewardP} alt="" className='object-cover h-full w-full' />
                     </div>
-                    <div className='p-[20px] w-full border rounded-md grid gap-[20px] border-black me'>
+                    <div className='rounded-bl-[30px] rounded-t-[30px] p-[20px] w-full border grid gap-[20px] border-black me'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Accelerate Your Startup</h3>
                         </div>

@@ -4,13 +4,13 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Footer = () => {
     return (
-        <div className='w-full  bg-[#222222] overflow-x-hidden '>
+        <div className='w-full bg-[#222222] overflow-x-hidden py-[15px] '>
             <ScrollReveal direction="top">
-                <div className="p-[64px] w-full grid grid-cols-1 md:grid-cols-2 gap-[25px] items-center justify-center   ">
+                <div className="px-[20px]  md:px-[64px] w-full grid grid-cols-1 md:grid-cols-2 gap-[25px] items-center justify-center   ">
                     <ScrollReveal direction="left" className="max-w-[250px] w-full md:w-[250px] h-[250px]">
-                        <div className='w-full  h-[300px] '>
-                            <img src={chat} alt="" className='w-full h-full object-contain' />
-                        </div>
+                        <img src={chat} alt="" className='w-full' />
+                        {/* <div className='w-full  h-[300px] '>
+                        </div> */}
                     </ScrollReveal>
                     <ScrollReveal direction="right">
                         <div className='w-full text-white grid gap-4'>
@@ -24,8 +24,8 @@ const Footer = () => {
                         </div>
                     </ScrollReveal>
                 </div>
-                <hr className='bg-white h-[2px] w-full ' />
-                <div className="p-[64px] w-full flex flex-col md:flex-row gap-[25px] items-center justify-center text-white  ">
+                <hr className='bg-white h-[2px] w-full mt-[10px] ' />
+                <div className="p-[20px]  md:px-[64px]  w-full flex flex-col md:flex-row gap-[25px] items-center justify-center text-white  ">
                     Built By Team SoluTech
                 </div>
             </ScrollReveal>

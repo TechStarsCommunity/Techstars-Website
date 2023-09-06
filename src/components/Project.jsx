@@ -7,7 +7,7 @@ import dashboard from "../assets/image/dashboard.svg"
 
 const Project = () => {
     return (
-        <div className=' p-[64px] w-full bg-white py-[60px] overflow-x-hidden'>
+        <div className='px-[20px]  md:px-[64px] w-full bg-white py-[60px] overflow-x-hidden'>
             <div className='border border-black p-[30px] rounded-l grid gap-[20px]'>
                 <ScrollReveal direction="left">
                     <div className='w-full grid gap-[10px] '>

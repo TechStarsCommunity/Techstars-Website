@@ -8,7 +8,7 @@ import ScrollReveal from '../provider/ScrollReveal';
 
 const YourComponent = () => {
     return (
-        <div className="grid-container bg-blue-50 p-[64px] w-full overflow-x-hidden">
+        <div className="grid-container py-[20px] w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
                     <div className=' p-[20px] w-full border rounded-b-[30px] rounded-tr-[30px] grid gap-[20px] border-black'>

@@ -16,7 +16,7 @@ import ScrollReveal from '../provider/ScrollReveal'
 
 const Hero = () => {
     return (
-        <div className='w-full min-h-[500px] py-[30px] relative flex items-center justify-center leftAnimation overflow-hidden px-[64px]'>
+        <div className='w-full min-h-[500px] py-[30px] relative flex items-center justify-center leftAnimation overflow-hidden px-[20px]  md:px-[64px]'>
             {/* <div className=' absolute left-0 h-full max-w-[300px] w-[30%] flex items-center justify-center z-'>
                 <img src={LeftHero} alt="" />
             </div> */}

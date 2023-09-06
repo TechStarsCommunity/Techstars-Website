@@ -30,14 +30,14 @@ const NavBar = () => {
     }, [disableScroll]);
 
     return (
-        <div className='w-full flex px-[64px] py-[20px] justify-between items-center'>
+        <div className='w-full flex px-[20px]  md:px-[64px] py-[20px] justify-between items-center'>
             <Link to="/">
                 <div className='w-[160px] h-[60px]'>
                     <img src={Logo} alt="" className='w-full h-full' />
                 </div>
             </Link>
             <div className={`  ${navState ? "flex absolute w-full h-full top-0 left-0  z-10 bg-black/80" : ""}`}>
-                <div className={`${navState ? "flex flex-col gap-[25px] p-[64px] h-full z-10 " : "hidden"}  md:flex md:gap-[40px] items-center ${navState ? "w-[80%] bg-white absolute top-0 left-0" : "relative"}`} >
+                <div className={`${navState ? "flex flex-col gap-[25px] p-[20px] h-full z-10 " : "hidden"}  md:flex md:gap-[40px] items-center ${navState ? "w-[80%] bg-white absolute top-0 left-0" : "relative"}`} >
                     {navState && (
                         <div className="flex justify-between items-center w-full">
                             <Link to="/">
