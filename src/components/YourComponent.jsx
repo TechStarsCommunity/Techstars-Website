@@ -11,7 +11,7 @@ const YourComponent = () => {
         <div className="grid-container py-[20px] w-full overflow-x-hidden">
             <ScrollReveal direction="left">
                 <div className="item item1">
-                    <div className=' p-[20px] w-full border rounded-b-[30px] rounded-tr-[30px] grid gap-[20px] border-black'>
+                    <div className=' p-[20px] md:p-[40px] w-full border rounded-b-[30px] rounded-tr-[30px] grid gap-[20px] border-black'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Get involved in Open-source</h3>
                         </div>
@@ -34,7 +34,7 @@ const YourComponent = () => {
                     <div className=' items-center w-full'>
                         <img src={rewardG} alt="" className='object-cover h-full w-full' />
                     </div>
-                    <div className='p-[20px] rounded-bl-[30px] rounded-t-[30px] w-full border grid gap-[20px] border-black me'>
+                    <div className='p-[20px] md:p-[40px] rounded-bl-[30px] rounded-t-[30px] w-full border grid gap-[20px] border-black me'>
                         <div className='w-full'>
                             <h3 className='text-3xl font-bold'>Stay Ahead of the Tech Curve</h3>
                         </div>

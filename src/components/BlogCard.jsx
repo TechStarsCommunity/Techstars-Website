@@ -2,9 +2,9 @@ import React from 'react'
 
 const BlogCard = () => {
     return (
-        <div className='w-full p-[30px] grid gap-[10px]'>
-            <div className='w-full p-[10px] border border-b-black gap-[64px] grid md:grid-cols-2 grid-cols-1  '>
-                <div className='gap-[10px] grid md:grid-cols-2 grid-cols-1   ' >
+        <div className='w-full grid gap-[10px]'>
+            <div className='w-full py-[35px] border-b-2 border-b-black md:gap-[64px] gap-[30px]  grid md:grid-cols-2 grid-cols-1  '>
+                <div className='gap-[10px] grid md:grid-cols-[0.6fr,1fr] grid-cols-1  ' >
                     <div>
                         <p>3rd September, 2023</p>
                     </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const NavBlogCard = ({ color }) => {
     return (
-        <div className='w-full grid gap-[15px]'>
-            <div className={`w-full min-h-[200px] bg-black flex items-center justify-center p-[10px] `}>
+        <div className='w-full grid gap-[15px]  '>
+            <div className={`w-full min-h-[200px] rounded-[16px] ${color} flex items-center justify-center p-[10px] `}>
                 <h1 className='text-lg text-white text-center'>
                     The future of tech in the Nigerian sector and how to nurture talent
                 </h1>
