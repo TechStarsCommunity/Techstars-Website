@@ -116,16 +116,18 @@ const SignUp = () => {
         }
     };
     return (
-        <motion.div className='w-full grid gap[20px] grid-cols-1 md:grid-cols-2 h-[100vh]'
+        <motion.div className='w-full grid gap[20px] grid-cols-1 md:grid-cols-2 min-h-[100vh]'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
         >
-            <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[64px] px-[40px]'>
+            <div className='w-full h-[100%] flex flex-col gap-[25px] items-start p-[64px] px-[40px]'>
                 <div className='w-full flex items-center justify-center'>
-                    <div className='w-[160px] h-[60px]'>
-                        <img src={logo} alt="" className='w-full h-full' />
-                    </div>
+                    <Link to="/">
+                        <div className='w-[160px] h-[60px]'>
+                            <img src={logo} alt="" className='w-full h-full' />
+                        </div>
+                    </Link>
                 </div>
                 <div className='grid gap-[40px] w-full'>
                     <div className=''>

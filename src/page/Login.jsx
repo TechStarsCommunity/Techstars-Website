@@ -106,7 +106,7 @@ const Login = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.1 } }}
         >
-            <div className='w-full h-[100vh] flex flex-col gap-[25px] items-start p-[64px] px-[40px]'>
+            <div className='w-full min-h-[100vh] flex flex-col gap-[25px] items-start p-[64px] px-[40px]'>
                 <div className='w-full flex items-center justify-center'>
                     <div className='w-[160px] h-[60px]'>
                         <Link to="/">
