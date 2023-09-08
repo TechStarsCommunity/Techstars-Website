@@ -7,6 +7,7 @@ import Login from '../page/Login'
 import SignUp from '../page/SignUp'
 import { AnimatePresence } from 'framer-motion'
 import Projects from '../page/Projects'
+import About from '../page/About'
 
 const AnimatedRoutes = () => {
     const location = useLocation()
@@ -16,6 +17,7 @@ const AnimatedRoutes = () => {
                 <Route path="/" element={<AppLayout />}>
                     <Route index element={<LandingPage />} />
                     <Route path="/blogs" element={<Blogs />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/featured" element={<Projects />} />

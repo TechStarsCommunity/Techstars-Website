@@ -7,7 +7,7 @@ const Blogs = () => {
         <motion.div className='w-full px-[20px]  md:px-[64px] '
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.1 } }}
+            exit={{ opacity: 0, transition: { duration: 0.4 } }}
         >
             <div className='w-full flex justify-between items-center py-[30px] '>
                 <button className='rounded-tl-xl rounded-br-xl rounded-tr-xl border border-black p-[10px] font-bold'>

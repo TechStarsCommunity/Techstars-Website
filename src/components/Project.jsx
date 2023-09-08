@@ -5,7 +5,7 @@ import chatApp from "../assets/image/chatApp.svg"
 import universe from "../assets/image/universe.svg"
 import dashboard from "../assets/image/dashboard.svg"
 
-const Project = () => {
+const Project = ({ value }) => {
     return (
         <div className='px-[20px]  md:px-[64px] w-full bg-white py-[60px] overflow-x-hidden'>
             <div className='border border-black p-[30px] rounded-l grid gap-[20px]'>
@@ -55,9 +55,11 @@ const Project = () => {
                         </div>
                     </ScrollReveal>
                 </ScrollReveal>
-                <p className='text-lg text-center'>
-                    See More
-                </p>
+                {value ? (
+                    <p className='text-lg text-center'>
+                        See More
+                    </p>
+                ) : ""}
             </div>
         </div>
     )

@@ -30,6 +30,10 @@ body {
   /* Use the keyframes animation */
 }
 
+.myAnination {
+  animation: scaleAnimation 5s ease-in-out;
+}
+
 @keyframes scaleAnimation {
   0% {
     transform: scale(1);

@@ -85,7 +85,7 @@ const NavBar = () => {
             </div>
             <div className='hidden md:flex'>
                 {!user && <Link to="/login">
-                    <button className='px-[24px] py-[18px] rounded-md border border-black w-[191px]'>
+                    <button className='px-[24px] py-[18px] rounded-md border border-black w-[150px]'>
                         Log in
                     </button>
                 </Link>}
